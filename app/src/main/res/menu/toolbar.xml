@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:title="搜素"
+       app:showAsAction="ifRoom" /> <!-- 表示屏幕空间不足的情况下显示在toolbar 中，不够的话就显示在菜单中 -->
+
+    <item
+        android:id="@+id/action_notification"
+        android:title="通知"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item_one"
+        android:title="其它"
+        app:showAsAction="never" />
+
+</menu>
+
