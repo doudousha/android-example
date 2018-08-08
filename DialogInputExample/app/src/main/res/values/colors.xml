@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="dialog_tips_title_txt">#434343</color>
+    <color name="dialog_tips_bg">#eeeeee</color>
+    <color name="dialog_tips_content_txt">#898989</color>
+    <color name="dialog_tips_line">#c6c6c6</color>
+    <color name="dialog_tips_btn">#d6d6d6</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_tips_negative_btn_txt">#6699cc</color>
+    <color name="dialog_tips_positive_btn_txt">#c34949</color>
+</resources>
