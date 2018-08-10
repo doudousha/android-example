@@ -36,11 +36,21 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         Post post =  datas.get(position);
 
-        holder.author.setText(String.valueOf(post.getUserId()));
+        holder.author.setText(String.valueOf(post.getId()));
         holder.title.setText(post.getTitle());
         holder.content.setText(post.getBody());
+    }
 
+    public void add(List<Post> posts) {
+        int position =  datas.size() ;
+        datas.addAll(position,posts);
+        notifyItemInserted(position);
+    }
 
+    public void refresh(List<Post> posts){
+        datas.removeAll(datas);
+        datas.addAll(posts);
+        notifyDataSetChanged();
     }
 
     @Override

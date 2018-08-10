@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="wq.com.retrofitrxjavarecyleviewexample.MainActivity">
 
-   
+
+    <Button
+        android:id="@+id/btn_openEmptyRecyclerView"
+        android:text="打开空列表recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_openPagerRefreshRecyclerView"
+        android:text="打开远程刷新分页RecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

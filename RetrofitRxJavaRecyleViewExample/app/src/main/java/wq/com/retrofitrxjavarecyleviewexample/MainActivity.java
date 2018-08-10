@@ -1,9 +1,11 @@
 package wq.com.retrofitrxjavarecyleviewexample;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Button;
 
 import java.util.List;
 
@@ -40,7 +42,25 @@ public class MainActivity extends AppCompatActivity {
         api = retrofit.create(MyApi.class);
 
         fetchData();
+
+        bindBtnEvent();
     }
+
+    private void bindBtnEvent() {
+        Button btn_openEmptyRecyclerView =  (Button)findViewById(R.id.btn_openEmptyRecyclerView);
+        Button btn_openPagerRefreshRecyclerView =  (Button)findViewById(R.id.btn_openPagerRefreshRecyclerView);
+
+        btn_openEmptyRecyclerView.setOnClickListener(view->{
+            Intent intent = new Intent(MainActivity.this,EmptyRecylerViewActivity.class);
+            startActivity(intent);
+        });
+
+        btn_openPagerRefreshRecyclerView.setOnClickListener(view->{
+            Intent intent  =new Intent(MainActivity.this,RefreshPageRecyclerActivity.class);
+            startActivity(intent) ;
+        });
+    }
+
 
     private void fetchData() {
         compositeDisposable.add(api.getPosts()
